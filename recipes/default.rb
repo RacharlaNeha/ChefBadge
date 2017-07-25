@@ -13,15 +13,17 @@ service 'httpd' do
         action [:enable,:start]
 end
 
-package 'net-tools' do
-  action :install
-end
+#package 'net-tools' do
+ # action :install
+#end
 
-package 'httpd' do 
-  action :install 
-end 
+#package 'httpd' do 
+ # action :install 
+#end 
 
-service 'httpd' do 
+package platform_package_httpd
+
+service platform_service_httpd  do 
   action [:enable, :start] 
 end
 

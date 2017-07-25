@@ -1,4 +1,4 @@
-module LcdWebCookbook
+module LcdWebserverCookbook
  module Helpers
   def platform_package_httpd
     case node['platform']
@@ -15,6 +15,6 @@ module LcdWebCookbook
  end
 end
 
-Chef::Recipe.include(LcdWebCookbook::Helpers)
-
+Chef::Recipe.include(LcdWebserverCookbook::Helpers)
+Chef::Resource.include(LcdWebserverCookbook::Helpers)
 
