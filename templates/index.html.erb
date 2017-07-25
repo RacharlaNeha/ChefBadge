@@ -1,0 +1,7 @@
+<%= render "header.html.erb", cookbook: 'lcd_webserver' %>
+<% if @greeting =="Hello" %>
+<%= @greeting %> <%= @greeting_scope %> from <%= @fqdn %>
+<% else %>
+<%= render  "footer.html.erb", cookbook: 'lcd_webserver' %>
+<% end %>
+
